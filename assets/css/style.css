@@ -1,0 +1,9 @@
+header {
+    background-color: #191970;
+    display: flex;
+}
+
+.site-logo {
+    height: 120px;
+    align-content: center;
+}
