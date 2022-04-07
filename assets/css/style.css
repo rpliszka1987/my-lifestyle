@@ -1,9 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,500;1,400;1,500;1,700&family=Open+Sans:ital,wght@0,400;1,700&family=Staatliches&display=swap');
+
+* {
+    font-family: Anybody;
+}
+
 header {
     background-color: #191970;
-    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-stretch: ultra-expanded;
+    text-align: center;
+    font-style: italic;
+}
+
+main {
+    margin: 20px;
+    margin-right: 40px;
 }
 
 .site-logo {
-    height: 120px;
-    align-content: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.banner {
+    color: #ffffff;
+    background-color: #191970;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+.module-box {
+    padding: 0;
+    border-color: #191970;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.module-box-content {
+    margin: 10px;
 }
