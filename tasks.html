@@ -5,16 +5,59 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />    
     <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/tasks.css'>
 </head>
 <body>
-    <!-- PRETEND THIS IS A DIV -->
-    <!-- Your code goes in here -->
-
-
-    <!-- END - PRETEND THIS IS A DIV -->
+    <div class="columns">
+        <div class="column is-6">
+            <header class="header">
+                <a href="#create-task" rel="modal:open"><h3 class="btn-create">Add Task</h3></a>
+            </header>
+            <div id="create-task" class="modal">
+                <h1>Create Task</h1>
+                <textarea class="textarea"></textarea>
+                <a href="#" rel="modal:close" class=".close"><button class="save-btn">Add</button></a>
+            </div>
+                       
+            <ul class="tasks-list">
+                <li class="columns task-list-item">
+                    <div class="column is-2 check-box">
+                        <button class="btn-check check-no-color"><i class="fa-solid fa-check fa-lg color"></i></button> 
+                    </div>
+                    <div class="column is-10 task-box">
+                        <p class="task">Lorem ipsum lo lor</p>
+                    </div>   
+                </li>
+                <li class="columns task-list-item">
+                    <div class="column is-2 check-box">
+                        <button class="btn-check check-no-color"><i class="fa-solid fa-check fa-lg color"></i></button> 
+                    </div>
+                    <div class="column is-10 task-box">
+                        <p class="task">hey there</p>
+                    </div>   
+                </li>
+                <li class="columns task-list-item">
+                    <div class="column is-2 check-box">
+                        <button class="btn-check check-no-color"><i class="fa-solid fa-check fa-lg color"></i></button> 
+                    </div>
+                    <div class="column is-10 task-box">
+                        <p class="task">my name is</p>
+                    </div>   
+                </li>
+            </ul>    
+        </div>      
+    </div>
     
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src='./assets/js/main.js'></script>
     <script src='./assets/js/tasks.js'></script>
 </body>
