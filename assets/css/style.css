@@ -27,7 +27,7 @@ main {
 }
 
 
-.banner {
+.banner, .ui-widget-header {
     color: #ffffff;
     background-color: #191970;
     text-align: center;
@@ -35,7 +35,8 @@ main {
     font-style: italic;
 }
 
-.module-box {
+
+.module-box, .ui-widget {
     padding: 0;
     border-color: #191970;
     border-style: solid;

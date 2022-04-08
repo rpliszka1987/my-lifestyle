@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/contacts.css'>
+</head>
+
+<body>
+    <!-- PRETEND THIS IS A DIV -->
+    <!-- Your code goes in here -->
+    <div id="contacts-main-content">
+        <div>
+            <label for="contacts-search">Search: </label>
+            <input type="text" id="contacts-search" />
+        </div>
+        <div>
+            <ul id="contacts-list">
+
+            </ul>
+        </div>
+        <div>
+            <button id="contacts-create">Create a Contact</button>
+        </div>
+    </div>
+    <div id="contacts-detail" class="columns module-box-content">
+        <p>First Name: <span id="contacts-viewFirstName"></span></p>
+        <p>Last Name: <span id="contacts-viewLastName"></span></p>
+        <p>Phone: <span id="contacts-viewPhone"></span></p>
+        <p>Address: <span id="contacts-viewAddress"></span></p>
+        <input type="button" id="contacts-editbtn" value="Edit Contact"></input>
+    </div>
+
+    <div id="contacts-edit" class="columns module-box-content">
+        <label for="contacts-editFirstName">First Name: </label><input type="textbox" id="contacts-editFirstName" />
+        <br />
+        <label for="contacts-editLastName">Last Name: </label><input type="textbox" id="contacts-editLastName" />
+        <br />
+        <label for="contacts-editPhone">Phone: </label><input type="textbox" id="contacts-editPhone" />
+        <br />
+        <label for="contacts-editAddress">Address: </label><textarea id="contacts-editAddress"></textarea>
+        <br />
+        <button id="contacts-savebtn">Save Contact</button>
+    </div>
+
+    <!-- END - PRETEND THIS IS A DIV -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src='./assets/js/main.js'></script>
+    <script src='./assets/js/contacts.js'></script>
+</body>
+
+</html>
