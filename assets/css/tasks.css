@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.columns {
+    margin-left: 10px;
+
+}
+
 .header h3 {
     text-align: center;
     background-color: #43719E;
@@ -40,6 +45,11 @@
     float: right;
 }
 
+.tasks-list {
+    border: 1px solid #43719E;
+    padding-bottom: 25px;
+    min-height: 100px;
+}
 
 .task-list-item, .header {
     padding: 10px;
