@@ -106,14 +106,16 @@ var contacts_detail = $("#contacts-detail" ).dialog({
     title: "Contact Details",
     height: 400,
     width: 350,
-    modal: true
+    modal: true,
+    dialogClass: "no-close"
 });
 
 var contacts_edit = $("#contacts-edit" ).dialog({
     autoOpen: false,
     height: 250,
     width: 350,
-    modal: true
+    modal: true,
+    dialogClass: "no-close"
 });
 
 $("#contacts-search").on("input", function(event) {
