@@ -57,7 +57,7 @@ $("ul").on("click", ".btn-check", function(){
         list.parent(".task-list-item").remove();
         taskList.splice(taskIndex,1);
         localStorage.setItem('taskStorage',JSON.stringify(taskList));
-    }, 1000);
+    }, 500);
 });
 
 
