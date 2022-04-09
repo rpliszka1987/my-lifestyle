@@ -23,19 +23,19 @@ var createTaskItem = function(task) {
 };
 
 var saveTaskItem = function(task) {
-    taskList.push(task)
-    console.log(taskList)
-    localStorage.setItem('taskStorage',JSON.stringify(taskList))
+    taskList.push(task);
+    console.log(taskList);
+    localStorage.setItem('taskStorage',JSON.stringify(taskList));
 };
 
 function getStoredTasks(){
-    var storedtasks = localStorage.getItem('taskStorage')
-    if(storedtasks){
-        taskList = JSON.parse(storedtasks);
+    var storedTasks = localStorage.getItem('taskStorage');
+    if(storedTasks){
+        taskList = JSON.parse(storedTasks);
     }
-    console.log(taskList)
+    console.log(taskList);
     taskList.forEach(task => {
-        createTaskItem(task)
+        createTaskItem(task);
     });
 };
 
@@ -50,13 +50,14 @@ $(".btn-create").on("click", function (){
 // Display a green check when checkbox is clicked
 $("ul").on("click", ".btn-check", function(){
     $(this).removeClass("check-no-color").addClass("check-color");
+    var list = $(this).parent(".check-box");
     var taskIndex = $(this).closest(".task-list-item").index();
-    console.log(taskIndex);
-    var taskList = $(this).parent(".check-box");
-    var taskText = taskList.siblings(".task-box").children(".task").text();
-    console.log(taskText);
 
-    localStorage.setItem(taskIndex, JSON.stringify(taskText));    
+    setTimeout(function(){
+        list.parent(".task-list-item").remove();
+        taskList.splice(taskIndex,1);
+        localStorage.setItem('taskStorage',JSON.stringify(taskList));
+    }, 1000);
 });
 
 
