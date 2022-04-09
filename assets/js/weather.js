@@ -39,6 +39,16 @@ function getUserWeather(lat, lon) {
                 currentWeatherTempEl.textContent = Math.floor(data.current.temp) + " F";
                 // Current Humidity
                 currentWeatherHumidityEl.textContent = data.current.humidity + " %";
+
+                // Daily Weather
+                for (var i = 0; i < 5; i++) {
+                    var weatherIconEl = document.querySelector(".img-day-" + i);
+                    var weatherTempEl = document.querySelector(".temp-day-" + i);
+
+                    weatherIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png")
+                    weatherTempEl.textContent = Math.floor(data.daily[i].temp.day) + " F";
+
+                }
             });
         } else {
             alert("Unable to get weather");
