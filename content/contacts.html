@@ -1,16 +1,14 @@
 
-                    <div id="contacts-main-content">
+                    <div id="contacts-main-content" class="module-box-content">
                         <div>
                             <label for="contacts-search">Search: </label>
                             <input type="text" id="contacts-search" />
+                            <button id="contacts-create">Create</button>
                         </div>
                         <div>
                             <ul id="contacts-list">
 
                             </ul>
-                        </div>
-                        <div>
-                            <button id="contacts-create">Create a Contact</button>
                         </div>
                     </div>
                     <div id="contacts-detail" class="columns module-box-content">
@@ -20,6 +18,7 @@
                         <p>Phone: <span id="contacts-viewPhone"></span></p>
                         <p>Address: <span id="contacts-viewAddress"></span></p>
                         <input type="button" id="contacts-editbtn" value="Edit Contact"></input>
+                        <input type="button" class="btn-closedialog" value="Close" data-dialogID="#contacts-detail">
                     </div>
                     </div>
 
@@ -44,6 +43,7 @@
                             </div>
                             <div>
                                 <button id="contacts-savebtn">Save Contact</button>
+                                <input type="button" class="btn-closedialog" value="Close" data-dialogID="#contacts-edit">
                             </div>
                         </div>
                     </div>

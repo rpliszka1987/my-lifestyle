@@ -2,3 +2,19 @@
 .ui-dialog-titlebar-close {
     display: none;
 }
+
+.module-box-content, .module-box-content div {
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.controls-bar {
+    align-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: disc;
+}
