@@ -1,5 +1,7 @@
 
-
+if (!localStorage.getItem("lifestyle-location")) {
+    window.location = "./welcome.html";
+}
 
 function LoadContent(path, target) {
     fetch(path)
@@ -14,3 +16,4 @@ function LoadContent(path, target) {
 }
 
 LoadContent("../content/contacts.html", "#contacts-content");
+LoadContent("../content/tasks.html", "#tasks-content");

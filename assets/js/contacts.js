@@ -176,3 +176,7 @@ $("#contacts-savebtn").on("click", function(item) {
 
     contacts_edit.dialog("close");
 });
+
+$(".btn-closedialog").on("click", function(event) {
+    $(event.target.dataset.dialogid).dialog("close");
+});
