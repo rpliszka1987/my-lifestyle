@@ -18,3 +18,4 @@ function LoadContent(path, target) {
 LoadContent("../content/contacts.html", "#contacts-content");
 LoadContent("../content/tasks.html", "#tasks-content");
 LoadContent("../content/shoppinglist.html", "#shopping-list-content")
+LoadContent("../content/weather.html", "#weather-content")
