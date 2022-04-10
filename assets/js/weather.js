@@ -44,7 +44,6 @@ function getUserWeather(lat, lon) {
                 currentWeatherTempEl.textContent = Math.floor(data.current.temp) + " F";
                 // Current Humidity
                 currentWeatherHumidityEl.textContent = data.current.humidity + " %";
-debugger;
                 // Daily Weather
                 for (var i = 0; i < 5; i++) {
                     var weatherIconEl = document.querySelector(".img-day-" + i);
