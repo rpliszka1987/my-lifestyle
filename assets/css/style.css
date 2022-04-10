@@ -4,7 +4,9 @@
     font-family: Anybody;
 }
 
-html, body, .full-page {
+html,
+body,
+.full-page {
     height: 100%;
 }
 
@@ -14,7 +16,7 @@ header {
     height: 100px;
 }
 
-header div img{
+header div img {
     height: 50px;
 }
 
@@ -36,7 +38,8 @@ main {
 }
 
 
-.banner, .ui-widget-header {
+.banner,
+.ui-widget-header {
     color: #ffffff;
     background-color: #191970;
     text-align: center;
@@ -52,7 +55,8 @@ main {
 }
 
 
-.module-box, .ui-widget {
+.module-box,
+.ui-widget {
     padding: 0;
     border-color: #191970;
     background-color: #ffffff;
@@ -64,4 +68,18 @@ main {
 
 .module-box-content {
     margin: 10px;
+}
+
+.is-visible-mobile-only {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .is-visible-mobile-only {
+        display: block;
+    }
+
+    header {
+        height: 150px;
+    }
 }
