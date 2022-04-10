@@ -112,8 +112,8 @@ var contacts_detail = $("#contacts-detail" ).dialog({
 
 var contacts_edit = $("#contacts-edit" ).dialog({
     autoOpen: false,
-    height: 250,
-    width: 350,
+    height: 400,
+    width: 370,
     modal: true,
     dialogClass: "no-close"
 });
