@@ -11,6 +11,11 @@ html, body, .full-page {
 header {
     background-color: #191970;
     align-items: center;
+    height: 100px;
+}
+
+header div img{
+    height: 50px;
 }
 
 h1 {
