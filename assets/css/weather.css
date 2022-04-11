@@ -1,0 +1,8 @@
+.weather-header-style {
+    text-align: center;
+}
+
+.img-day-0, .img-day-1, .img-day-2, .img-day-3, .img-day-4 {
+    height:80px;
+    width: 80px;
+}
