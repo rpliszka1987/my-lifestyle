@@ -1,4 +1,4 @@
-var urlId = "bb2c88d223252f9cbf3c41f7d0c2aa16"
+var urlId = "bb2c88d223252f9cbf3c41f7d0c2aa16";
 var testLocation = "Flushing";
 var currentweatherDayEl = document.querySelector("#weather-current-day");
 var currentWeatherIconEl = document.querySelector("#weather-current-icon");
@@ -8,25 +8,25 @@ var currentWeatherHumidityEl = document.querySelector("#weather-current-humidity
 
 // Get user lon and lat
 function getUserLocation(location) {
-    /*     var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&limit=1&appid=" + urlId;
+    var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&limit=1&appid=" + urlId;
 
-        fetch(apiUrl).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    var locationLat = data[0].lat.toString();
-                    var locationLon = data[0].lon.toString();
+    fetch(apiUrl).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (data) {
+                var locationLat = data[0].lat.toString();
+                var locationLon = data[0].lon.toString();
 
-                    getUserWeather(locationLat, locationLon);
-                })
-            } else {
-                alert("Location not found.");
-            }
-        });
-    */
+                getUserWeather(locationLat, locationLon);
+            })
+        } else {
+            alert("Location not found.");
+        }
+    });
 
-    var locationJson = JSON.parse(localStorage.getItem("lifestyle-location"));
 
-    getUserWeather(locationJson.geometry.location.lat, locationJson.geometry.location.lng);
+    // var locationJson = JSON.parse(localStorage.getItem("lifestyle-location"));
+
+    // getUserWeather(locationJson.geometry.location.lat, locationJson.geometry.location.lng);
 };
 
 function getUserWeather(lat, lon) {
