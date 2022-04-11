@@ -57,6 +57,10 @@ $("ul").on("click", ".btn-check", function(){
     console.log(taskText);
 
     localStorage.setItem(taskIndex, JSON.stringify(taskText));    
+<<<<<<< HEAD
 });
 
 
+=======
+});
+>>>>>>> 8880c8e (shopping added)
