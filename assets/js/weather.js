@@ -48,7 +48,7 @@ function getUserWeather(lat, lon) {
                 for (var i = 0; i < 5; i++) {
                     var weatherIconEl = document.querySelector(".img-day-" + i);
                     var weatherTempEl = document.querySelector(".temp-day-" + i);
-                    document.getElementById(`day-${i}`).innerText = moment(data.daily[i].dt * 1000).format("ddd");
+                    // document.getElementById(`day-${i}`).innerText = moment(data.daily[i].dt * 1000).format("ddd");
                     weatherIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png")
                     weatherTempEl.textContent = Math.floor(data.daily[i].temp.day) + " F";
 
