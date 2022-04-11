@@ -52,7 +52,7 @@ function getUserWeather(lat, lon) {
                     var weatherIconEl = document.querySelector(".img-day-" + i);
                     var weatherTempEl = document.querySelector(".temp-day-" + i);
                     var weatherDayEl = document.querySelector(`.day-` + i);
-                    weatherDayEl.textContent = moment(data.daily[i].dt * 1000).format("dddd");
+                    weatherDayEl.textContent = moment(data.daily[i + 1].dt * 1000).format("dddd");
                     weatherIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png")
                     weatherTempEl.textContent = Math.floor(data.daily[i].temp.day) + " F";
 
