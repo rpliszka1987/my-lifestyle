@@ -1,10 +1,10 @@
 var taskList = [];
 
 
-$(".save-btn").on("click", function(e) {
+$(".tasks-save-btn").on("click", function(e) {
     e.preventDefault()
     var parent = $(this).closest(".modal");
-    var text = parent.children(".textarea").val().trim();
+    var text = parent.children(".tasks-text").val().trim();
     const newTask = {
         task_text: text
     }
@@ -14,8 +14,8 @@ $(".save-btn").on("click", function(e) {
 
 var createTaskItem = function(task) {
     var list = $("<li>").addClass("columns task-list-item");
-    var checkDiv = $("<div>").addClass("column is-2 check-box").html("<button class='btn-check check-no-color'><i class='fa-solid fa-check fa-lg'></i></button>");
-    var taskDiv = $("<div>").addClass("column is-10 task-box").html("<p class='task'>" + task.task_text + "</p>");
+    var checkDiv = $("<div>").addClass("column is-one-fifth tasks-check-box").html("<button class='btn-check check-no-color'><i class='fa-solid fa-check fa-lg'></i></button>");
+    var taskDiv = $("<div>").addClass("column is-four-fifths task-box").html("<p class='task'>" + task.task_text + "</p>");
 
     list.append(checkDiv);
     list.append(taskDiv);
@@ -23,26 +23,26 @@ var createTaskItem = function(task) {
 };
 
 var saveTaskItem = function(task) {
-    taskList.push(task)
-    console.log(taskList)
-    localStorage.setItem('taskStorage',JSON.stringify(taskList))
+    taskList.push(task);
+    console.log(taskList);
+    localStorage.setItem('taskStorage',JSON.stringify(taskList));
 };
 
 function getStoredTasks(){
-    var storedtasks = localStorage.getItem('taskStorage')
-    if(storedtasks){
-        taskList = JSON.parse(storedtasks);
+    var storedTasks = localStorage.getItem('taskStorage');
+    if(storedTasks){
+        taskList = JSON.parse(storedTasks);
     }
-    console.log(taskList)
+    console.log(taskList);
     taskList.forEach(task => {
-        createTaskItem(task)
+        createTaskItem(task);
     });
 };
 
 getStoredTasks();
 
 // Clear textarea after modale closes
-$(".btn-create").on("click", function (){
+$(".tasks-btn-create").on("click", function (){
     $("textarea").val("");
 });
 
@@ -50,13 +50,14 @@ $(".btn-create").on("click", function (){
 // Display a green check when checkbox is clicked
 $("ul").on("click", ".btn-check", function(){
     $(this).removeClass("check-no-color").addClass("check-color");
+    var list = $(this).parent(".check-box");
     var taskIndex = $(this).closest(".task-list-item").index();
-    console.log(taskIndex);
-    var taskList = $(this).parent(".check-box");
-    var taskText = taskList.siblings(".task-box").children(".task").text();
-    console.log(taskText);
 
-    localStorage.setItem(taskIndex, JSON.stringify(taskText));    
+    setTimeout(function(){
+        list.parent(".task-list-item").remove();
+        taskList.splice(taskIndex,1);
+        localStorage.setItem('taskStorage',JSON.stringify(taskList));
+    }, 280);
 });
 
 

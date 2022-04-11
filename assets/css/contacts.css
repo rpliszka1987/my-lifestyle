@@ -3,7 +3,7 @@
     display: none;
 }
 
-.module-box-content, .module-box-content div {
+.contacts-module-box-content, .contacts-module-box-content div {
     width: 100%;
     align-content: center;
     align-items: center;
@@ -15,6 +15,6 @@
     align-items: center;
 }
 
-ul {
+.contacts-list {
     list-style: disc;
 }
