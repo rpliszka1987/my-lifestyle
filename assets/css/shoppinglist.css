@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,500;1,400;1,500;1,700&family=Open+Sans:ital,wght@0,400;1,700&family=Staatliches&display=swap');
 
 
-body {
-  font-size: $base__font-size;
-  background: $grey; //change background image
-  font-family: $font-family--primary;
-}
 
 h1 {
     font-size: 50px;
@@ -30,7 +25,6 @@ p.description {
 }
 
 .list {
- background-color: ;
   padding: em(10px) em(25px);
   max-width: 80%;
   margin: em(30px) auto;
@@ -47,9 +41,6 @@ p.description {
   }
 }
 
-button {
-  @include button;
-}
 
 .togglebutton {
   font-size: em(11px);
@@ -62,12 +53,6 @@ ul {
   text-align: center;
   margin: em(10px) 0;
   
-  li {
-    font-size: em(20px);
-    margin: em(5px) 0;
-    padding: 10px 0;
-    display: block;
-  }
 }
 
 input {

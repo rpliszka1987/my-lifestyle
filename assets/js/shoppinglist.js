@@ -5,7 +5,7 @@ const listDiv = document.querySelector('.list');
 //User INPUT
 const userInput = document.querySelector('.userInput');
 const button = document.querySelector('button.description');
-const p = document.querySelector('p.description');
+const p = document .querySelector('p.description');
 let listItem = document.querySelectorAll('li');
 
 //ADD ITEM
@@ -72,3 +72,5 @@ listDiv.addEventListener('mouseout', (event) => {
   event.target.style.textTransform = 'lowercase';
   }
 });
+
+
