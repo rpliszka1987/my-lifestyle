@@ -8,20 +8,25 @@ var currentWeatherHumidityEl = document.querySelector("#weather-current-humidity
 
 // Get user lon and lat
 function getUserLocation(location) {
-    var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&limit=1&appid=" + urlId;
+    /*     var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&limit=1&appid=" + urlId;
 
-    fetch(apiUrl).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (data) {
-                var locationLat = data[0].lat.toString();
-                var locationLon = data[0].lon.toString();
+        fetch(apiUrl).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (data) {
+                    var locationLat = data[0].lat.toString();
+                    var locationLon = data[0].lon.toString();
 
-                getUserWeather(locationLat, locationLon);
-            })
-        } else {
-            alert("Location not found.");
-        }
-    });
+                    getUserWeather(locationLat, locationLon);
+                })
+            } else {
+                alert("Location not found.");
+            }
+        });
+    */
+
+    var locationJson = JSON.parse(localStorage.getItem("lifestyle-location"));
+
+    getUserWeather(locationJson.geometry.location.lat, locationJson.geometry.location.lng);
 };
 
 function getUserWeather(lat, lon) {
@@ -39,12 +44,11 @@ function getUserWeather(lat, lon) {
                 currentWeatherTempEl.textContent = Math.floor(data.current.temp) + " F";
                 // Current Humidity
                 currentWeatherHumidityEl.textContent = data.current.humidity + " %";
-
                 // Daily Weather
                 for (var i = 0; i < 5; i++) {
                     var weatherIconEl = document.querySelector(".img-day-" + i);
                     var weatherTempEl = document.querySelector(".temp-day-" + i);
-
+                    document.getElementById(`day-${i}`).innerText = moment(data.daily[i].dt * 1000).format("ddd");
                     weatherIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png")
                     weatherTempEl.textContent = Math.floor(data.daily[i].temp.day) + " F";
 
