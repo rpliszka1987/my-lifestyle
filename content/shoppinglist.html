@@ -1,10 +1,20 @@
-<button id="add-shopping-item" value="Add Shopping List Item">
-    Add Shopping List Item
-</button>
-<ul>
-    <li>Shopping Item 1 - (buy)</li>
-    <li>Shopping Item 2 - <a href="https://www.amazon.com/s?k=celery&crid=1878QXMPDZ6BA&sprefix=celery%2Caps%2C152&ref=nb_sb_noss" target="_blank">(buy)</a></li>
-</ul>
 
+    <h1 id="myHeading"> Shopping list </h1>
+    <p class="intro">Your <span class="intro__span">personal</span> shopping list.</p>    
+    <button id="toggleList" class="togglebutton">Hide list</button>
+    <div class="list">
+        <p class="description">Type a <span>colour<span> to change list colour</p>
+        <input type="text" class="userInput">
+        <button class="description"> Change List color</button>
+        <ul>
+          <li>Rice</li>
+          <li>pasta</li>
+          <li>Milk</li>
+          <li>Cookies</li>
+        </ul>
+        <input type="text" class="addItemInput">
+        <button class="addItemButton"> Add Item </button>
+      <button class="removeItemButton"> Remove Last item </button>
+     </div>
 
-<script src="../assets/js/shoppinglist.js"></script>
+    <script src='./assets/js/shoppinglist.js'></script>
