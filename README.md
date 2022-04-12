@@ -21,4 +21,4 @@
 
 ## Repo URL
 
-- https://github.com/cmullendore-bootcamp/my-lifestyle/tree/main
+- https://github.com/cmullendore-bootcamp/my-lifestyle
