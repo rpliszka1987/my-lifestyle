@@ -66,25 +66,6 @@ function FindContacts(key, maxReturned) {
 
 var contacts_List = [];
 
-
-function LoadTestData() {
-    var contacts_c = new contacts_Contact("Chris", "Mullendore");
-    contacts_c.FirstName = "Chris";
-    contacts_c.LastName = "Mullendore";
-    contacts_List.push(contacts_c);
-
-    var contacts_d = new contacts_Contact("David", "Matthews");
-    contacts_d.FirstName = "David";
-    contacts_d.LastName = "Matthews";
-    contacts_List.push(contacts_d);
-
-    var contacts_e = new contacts_Contact("bob", "Williams");
-    contacts_e.FirstName = "Bob";
-    contacts_e.LastName = "Williams";
-    contacts_List.push(contacts_e);
-
-}
-
 function RenderContacts(contacts) {
 
     var contactsUl = document.getElementById("contacts-list");
@@ -104,7 +85,7 @@ LoadContacts();
 var contacts_detail = $("#contacts-detail" ).dialog({
     autoOpen: false,
     title: "Contact Details",
-    height: 400,
+    height: 350,
     width: 350,
     modal: true,
     dialogClass: "no-close"
@@ -112,7 +93,7 @@ var contacts_detail = $("#contacts-detail" ).dialog({
 
 var contacts_edit = $("#contacts-edit" ).dialog({
     autoOpen: false,
-    height: 250,
+    height: 350,
     width: 350,
     modal: true,
     dialogClass: "no-close"
