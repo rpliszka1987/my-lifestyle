@@ -1,5 +1,6 @@
+
 .tasks-header {
-    border-radius: 10px;
+    background-color: white;
 }
 
 .tasks-header h3 {
@@ -8,7 +9,6 @@
     padding: 15px 10px;
     border-radius: 10px;
     font-size: 20px;
-    font-weight: bold;
     color: white;
 }
 
@@ -20,7 +20,6 @@
     top: 6.5px;
     right: 6.5px;
 }
-
 
 .modal h1 {
     text-align: center;
@@ -58,6 +57,10 @@
     margin: 10px;
 }
 
+.tasks-header { 
+    padding: 30px 0;
+}
+
 .task-list-item {
     border-bottom: 1.5px solid #191970;
     padding-bottom: 20px;
@@ -90,4 +93,19 @@
 
 .task {
     padding: 10px 15px;
+}
+
+
+.modal {
+    vertical-align: middle;
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    box-sizing: border-box;
+    width: 90%;
+    background: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 0 10px #000;
+    text-align: left;
+    max-height: 300px;
 }
