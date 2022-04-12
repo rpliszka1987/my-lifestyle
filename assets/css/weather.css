@@ -48,8 +48,22 @@
      font-size: 45px;
  }
 
- #weather-current-condition, #weather-current-humidity {
-     font-size: 40px;
-     margin-bottom: 20px;
+
+ @media screen and (max-width: 1024px) {
+    .weather-column-right {
+        display: none;
+    }
+
+    #weather-current-day {
+        font-size: 30px;
+    }
+
+    #weather-current-icon {
+        width: 100px;
+        height: 100px;
+    }
+    #weather-current-temp {
+        font-size: 25px;
+    }
  }
 
