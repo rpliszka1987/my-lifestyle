@@ -40,19 +40,17 @@ function getUserWeather(lat, lon) {
                 currentweatherDayEl.textContent = moment().format("dddd");
                 // Current Weather Icon
                 currentWeatherIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png");
-                // Current conditions
-                currentWeatherConditionEl.textContent = data.current.weather[0].main;
+
                 // Current Temp
                 currentWeatherTempEl.textContent = Math.floor(data.current.temp) + " F";
-                // Current Humidity
-                currentWeatherHumidityEl.textContent = data.current.humidity + " %";
+
                 // Daily Weather
 
                 for (var i = 0; i < 5; i++) {
                     var weatherIconEl = document.querySelector(".img-day-" + i);
                     var weatherTempEl = document.querySelector(".temp-day-" + i);
-                    var weatherDayEl = document.querySelector(`.day-` + i);
-                    weatherDayEl.textContent = moment(data.daily[i + 1].dt * 1000).format("dddd");
+                    var weatherDayEl = document.querySelector(`#day-` + i);
+                    weatherDayEl.textContent = moment(data.daily[i + 1].dt * 1000).format("ddd");
                     weatherIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png")
                     weatherTempEl.textContent = Math.floor(data.daily[i].temp.day) + " F";
 
