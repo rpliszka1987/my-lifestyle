@@ -1,1 +1,55 @@
- 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.img-day-0,
+ .img-day-1,
+ .img-day-2,
+ .img-day-3,
+ .img-day-4 {
+     width: 80px;
+     height: 80px;
+ }
+
+ body {
+     margin-top: 30px;
+     color: midnightblue;
+ }
+
+ .temp-day-0,
+ .temp-day-1,
+ .temp-day-2,
+ .temp-day-3,
+ .temp-day-4 {
+     padding-top: 20px;
+     font-size: 20px;
+ }
+
+ .day-0-container,
+ .day-1-container,
+ .day-2-container,
+ .day-3-container,
+ .day-4-container {
+     margin-bottom: 15px;
+     
+ }
+
+ #weather-current-day {
+     font-size: 60px;
+ }
+
+ #weather-current-icon {
+     width: 200px;
+     height: 200px;
+ }
+
+ #weather-current-temp {
+     font-size: 45px;
+ }
+
+ #weather-current-condition, #weather-current-humidity {
+     font-size: 40px;
+     margin-bottom: 20px;
+ }
+
