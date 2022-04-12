@@ -1,12 +1,5 @@
-.columns h1 {
-    padding: 15px;
-    text-align: center;
-}
-
-.columns {
-    margin-left: 10px;
-    margin-right: 10px;
-
+.tasks-header {
+    border-radius: 10px;
 }
 
 .tasks-header h3 {
@@ -18,6 +11,11 @@
     font-weight: bold;
     color: white;
 }
+
+.tasks-header a {
+    text-decoration: none;
+}
+
 .modal a.close-modal {
     top: 6.5px;
     right: 6.5px;
@@ -65,17 +63,10 @@
     padding-bottom: 20px;
 }
 
-.tasks-check-box {
-    border-color: #191970;
-    justify-content: center;
-    border-width: 1px;
-}
-
-.btn-check {
+.tasks-btn-check {
     height: 50px;
     width: 50px;
     padding: 0 auto;
-    background-color: #000000;
     font-size: 25px;
     border: none;
     border: 2px solid #191970;
@@ -91,7 +82,6 @@
 }
 
 .task-box {
-    border:2px solid white;
     border-radius: 10px;
     color: white;
     background-color: #191970;
@@ -100,11 +90,4 @@
 
 .task {
     padding: 10px 15px;
-}
-
-.thematic-break {
-    width: 80%;
-    margin: auto;
-    height: 2px;
-    background-color: #191970;
 }
