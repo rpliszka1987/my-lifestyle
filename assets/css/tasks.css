@@ -1,12 +1,5 @@
-.columns h1 {
-    padding: 15px;
-    text-align: center;
-}
-
-.columns {
-    margin-left: 10px;
-    margin-right: 10px;
-
+.tasks-header {
+    border-radius: 10px;
 }
 
 .tasks-header h3 {
@@ -18,6 +11,11 @@
     font-weight: bold;
     color: white;
 }
+
+.tasks-header a {
+    text-decoration: none;
+}
+
 .modal a.close-modal {
     top: 6.5px;
     right: 6.5px;
@@ -65,7 +63,7 @@
     padding-bottom: 20px;
 }
 
-.btn-check {
+.tasks-btn-check {
     height: 50px;
     width: 50px;
     padding: 0 auto;
