@@ -1,7 +1,13 @@
 
-if (!localStorage.getItem("lifestyle-location")) {
+var index_current_location_json = localStorage.getItem("lifestyle-location");
+
+if (!index_current_location_json) {
     window.location = "./welcome.html";
 }
+
+var index_location = JSON.parse(index_current_location_json);
+
+$("#index-current-location").html(index_location.name + "<br>" + index_location.vicinity);
 
 function LoadContent(path, target) {
     fetch(path)
