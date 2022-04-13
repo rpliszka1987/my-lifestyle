@@ -1,3 +1,4 @@
+html,
 body {
               height: 100%;
               margin: 0;
@@ -39,8 +40,7 @@ body {
                      cursor: pointer;
 
                    
-                   button {
-                     width: 100%;
+                   button {width: 100%;
                      padding: 1rem;
                      flex-grow: 0;
                      cursor: pointer;
@@ -55,7 +55,7 @@ body {
                    }
                    
                    button:disabled {
-                     background-color: #9fc1ee;
+                     background-color: #9bbfed;
                      color: #c5d4f0;
                      cursor: auto;
                    }
