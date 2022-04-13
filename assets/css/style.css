@@ -74,6 +74,13 @@ main {
     display: none;
 }
 
+button {
+    color: #ffffff;
+    background-color: #191970;
+    border-radius: 5px;
+    border: 0px;
+}
+
 @media screen and (max-width: 768px) {
     .is-visible-mobile-only {
         display: block;
